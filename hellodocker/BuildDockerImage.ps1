@@ -1,0 +1,1 @@
+docker build -t ashleypoole/hellodocker101:latest .
