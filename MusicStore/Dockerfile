@@ -13,6 +13,4 @@ WORKDIR /application
 
 COPY --from=Build /output .
 
-RUN dir
-
 ENTRYPOINT ["dotnet", "MusicStore.dll"]
