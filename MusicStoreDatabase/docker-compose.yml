@@ -1,9 +1,0 @@
-version: '3.0'
-services:
-  music-store-sql-server:
-    image: microsoft/mssql-server-windows-developer
-    ports:
-      - 1433:1433
-    environment:
-      - sa_password=NDC_MN_2018
-      - ACCEPT_EULA=Y

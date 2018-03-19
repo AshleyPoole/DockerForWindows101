@@ -11,6 +11,8 @@ namespace MusicStore.Models
         public MusicStoreContext(DbContextOptions<MusicStoreContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
+
             // TODO: #639
             //ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
