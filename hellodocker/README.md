@@ -13,13 +13,14 @@ Note, if you don't list an image tag, it will default to `latest`. It will also 
 
 3) You can check the containers status by using `docker ps` command.
 
-4) Fetch the containers IP by runing `docker inspect XYZ`. Replace XYZ with the container ID or name found in above command.
+4) Fetch the containers IP by running `docker inspect XYZ`. Replace XYZ with the container ID or name found in above command.
 
 5) Navigate to container's IP. On Server 2016, it will be the host's IP but on Windows 10 containers are run in Hyper-V mode which means each container receives its own IP address on an internal host network. Hyper-V mode will be explained in the talk.
 
 6) After finished, you can stop the container using `docker stop XYZ` and then removed by `docker rm XYZ`. Replace XYZ with the container ID or name found in above command. Alternatively, force the removal using `docker stop XYZ -f`.
 
 ### Other basic commands
+
 docker pull - Used to pull images from a Docker registry.
 
 docker start - Used to start a container.
