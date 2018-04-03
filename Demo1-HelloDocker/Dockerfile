@@ -1,7 +1,7 @@
 FROM microsoft/aspnetcore-build:2.0.0-nanoserver AS Build
 
 # Copy source code directory into a directory in the container at /src/
-COPY . /src/
+COPY . .
 
 # Change directory into /src/HelloDockerWindows/
 WORKDIR /src/HelloDockerWindows/
