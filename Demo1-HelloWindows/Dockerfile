@@ -3,8 +3,8 @@ FROM microsoft/aspnetcore-build:2.0.0-nanoserver AS Build
 # Copy source code directory into a directory in the container at /src/
 COPY . .
 
-# Change directory into /src/HelloDockerWindows/
-WORKDIR /src/HelloDockerWindows/
+# Change directory into /src/
+WORKDIR /src/
 
 # Build and publish to a directory in the container at /out
 RUN dotnet publish -c Release -o /output ./HelloDockerWindows.csproj
