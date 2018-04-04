@@ -1,10 +1,7 @@
 version: '3.0'
 services:
   music-store-web:
-    # Can either reference the pre-built image or build the image during creation
-    # Double check why both of these can be listed in version 2+.
     image: ashleypoole/musicstore:latest
-    build: .
     ports:
       - 80:80
     environment:
@@ -13,7 +10,7 @@ services:
       - music-store-db
 
   music-store-db:
-    image: microsoft/mssql-server-windows-developer:2017
+    image: ashleypoole/musicstoredb:latest
     ports:
       - 1433:1433
     environment:
