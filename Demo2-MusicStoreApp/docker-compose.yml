@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  music-store-web:
+    image: ashleypoole/musicstore:latest
+    ports:
+      - 80:80
+    environment:
+      - "Data:DefaultConnection:ConnectionString=Data Source=music-store-db;Database=MusicStore;User Id=sa;Password=NDC_MN_2018"
+    depends_on:
+      - music-store-db
+
+  music-store-db:
+    image: ashleypoole/musicstoredb:latest
+    ports:
+      - 1433:1433
+    environment:
+      - sa_password=NDC_MN_2018
+      - ACCEPT_EULA=Y
