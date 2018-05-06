@@ -10,7 +10,7 @@ services:
       - music-store-db
 
   music-store-db:
-    image: ashleypoole/musicstoredb:latest
+    image: ashleypoole/musicstoredb:ndc
     ports:
       - 1433:1433
     environment:
