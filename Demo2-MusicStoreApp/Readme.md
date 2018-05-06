@@ -27,7 +27,7 @@ ENTRYPOINT ["dotnet", "MusicStore.dll"]
 5) For the purpose of this demo, I have precreated a database image containing the database including the schema and sample data. We can choose to run the database image using `docker run` command or we can choose to construct our services using a compose file. For this demo, we will be using a compose file. Create a file within the `Demo2-MusicStore` folder called `docker-compose.yml`.
 
 6) Within the Docker compose file, let's declare the web server container definition and database server definition.
-
+ 
 ```plain
 version: '3.3'
 services:
@@ -41,7 +41,7 @@ services:
       - music-store-db
 
   music-store-db:
-    image: ashleypoole/musicstoredb:latest
+    image: ashleypoole/musicstoredb:ndc
     ports:
       - 1433:1433
     environment:
@@ -51,7 +51,7 @@ services:
 
 In this file, we're declaring two 'services' called `music-store-web` and `music-store-db` which are based on prebuilt images. For both images, we're mapping ports from the host into the service and also specifying environment variables. You'll notice the `depends_on` attribute for the `music-store-web` container which tells Docker that the web service depends on the database service so it should be started first. Its worth noting, while it will start the container first, it will not wait for SQL Server to be running operational which may cause issues.
 
-Docker maintains an internal DNS server, so you'll notice in the connection string that we can reference the database service by the service name rather than the IP address of the container. 
+Docker maintains an internal DNS server, so you'll notice in the connection string that we can reference the database service by the service name rather than the IP address of the container.
 
 7) You can bring up the MusicStore container and database server by running `docker-compose up -d`. This tells Docker to start up all 'services' in the file in detached mode.
 
