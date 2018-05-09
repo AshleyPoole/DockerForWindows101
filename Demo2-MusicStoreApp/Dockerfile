@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2.0.0-nanoserver AS Build
+FROM microsoft/aspnetcore-build:2.0-nanoserver AS Build
 
 COPY . .
 

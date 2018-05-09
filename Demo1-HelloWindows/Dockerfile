@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2.0.0-nanoserver AS Build
+FROM microsoft/aspnetcore-build:2.0-nanoserver AS Build
 
 # Copy source code directory into a directory in the container at /src/
 COPY . .
